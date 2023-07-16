@@ -11,6 +11,7 @@ import {
   FingerPrintIcon,
   SquaresPlusIcon,
 } from '@heroicons/react/24/outline'
+import { Link } from 'react-router-dom'
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -62,9 +63,9 @@ export default function Navbar() {
               <a href="/" className="text-sm font-semibold leading-6 text-white-900">
             Home
           </a>
-          <a href="/about" className="text-sm font-semibold leading-6 text-white-900">
+          <Link to='/about' className="text-sm font-semibold leading-6 text-white-900">
             About
-          </a>
+          </Link>
           <Popover className="relative bg-transparent">
             <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white">
               Services
