@@ -10,8 +10,13 @@ import {
   CursorArrowRaysIcon,
   FingerPrintIcon,
   SquaresPlusIcon,
+  GlobeAltIcon,
+  DocumentMagnifyingGlassIcon,
+  SparklesIcon,
+  FunnelIcon
 } from '@heroicons/react/24/outline'
 import { Link } from 'react-router-dom'
+
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -26,10 +31,10 @@ const solutions = [
   { name: 'Business Consultancy', description: 'Speak directly to your customers', href: '/services', icon: CursorArrowRaysIcon },
   { name: 'Social Media Management', description: "Your customers' data will be safe and secure", href: '/services', icon: FingerPrintIcon },
   { name: 'Branding Solutions', description: 'Connect with third-party tools', href: '/services', icon: SquaresPlusIcon },
-  { name: 'Website Development', description: 'Build strategic funnels that will convert', href: '/services', icon: ArrowPathIcon },
-  { name: 'SEO', description: 'Build strategic funnels that will convert', href: '/services', icon: ArrowPathIcon },
-  { name: 'Influential Marketing', description: 'Build strategic funnels that will convert', href: '/services', icon: ArrowPathIcon },
-  { name: 'Ads', description: 'Build strategic funnels that will convert', href: '/services', icon: ArrowPathIcon },
+  { name: 'Website Development', description: 'Build strategic funnels that will convert', href: '/services', icon: GlobeAltIcon },
+  { name: 'SEO', description: 'Build strategic funnels that will convert', href: '/services', icon: DocumentMagnifyingGlassIcon },
+  { name: 'Influential Marketing', description: 'Build strategic funnels that will convert', href: '/services', icon: SparklesIcon },
+  { name: 'Ads', description: 'Build strategic funnels that will convert', href: '/services', icon: FunnelIcon },
 ]
 
 
@@ -38,21 +43,21 @@ export default function Navbar() {
   return (
     <div className="bg-black relative z-50">
           <header className="fixed inset-x-0 top-0 z-60 transition before:bg-transparent after:bg-black">
-            <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+            <nav className="flex items-center justify-between p-6 lg:px-8 lg:w-8/12" aria-label="Global">
               <div className="flex lg:flex-1">
-                <a href="/" className="-m-1.5 p-1.5">
+                <Link to="/" className="-m-1.5 p-1.5">
                   <span className="sr-only">Your Company</span>
                   <img
                     className="h-8 w-auto"
                     src=""
                     alt="Company icon"
                   />
-                </a>
+                </Link>
               </div>
-              <div className="flex lg:hidden">
+              <div className="flex lg:hidden px-9">
                 <button
                   type="button"
-                  className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
+                  className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white left-20"
                   onClick={() => setMobileMenuOpen(true)}
                 >
                   <span className="sr-only">Open main menu</span>
@@ -60,9 +65,9 @@ export default function Navbar() {
                 </button>
               </div>
               <Popover.Group className="hidden lg:flex lg:gap-x-12">
-              <a href="/" className="text-sm font-semibold leading-6 text-white-900">
+              <Link to="/" className="text-sm font-semibold leading-6 text-white-900">
             Home
-          </a>
+          </Link>
           <Link to='/about' className="text-sm font-semibold leading-6 text-white-900">
             About
           </Link>
@@ -92,10 +97,10 @@ export default function Navbar() {
                         <item.icon className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
                       </div>
                       <div className="flex-auto">
-                        <a href={item.href} className="block font-semibold text-gray-900">
+                        <Link to={item.href} className="block font-semibold text-gray-900">
                           {item.name}
                           <span className="absolute inset-0" />
-                        </a>
+                        </Link>
                         <p className="mt-1 text-gray-600">{item.description}</p>
                       </div>
                     </div>
@@ -104,31 +109,26 @@ export default function Navbar() {
               </Popover.Panel>
             </Transition>
           </Popover>
-          <a href="/pricing" className="text-sm font-semibold leading-6 text-white-900">
+          <Link to="/pricing" className="text-sm font-semibold leading-6 text-white-900">
             Pricing
-          </a>
-          <a href="/contact" className="text-sm font-semibold leading-6 text-white-900">
+          </Link>
+          <Link to="/contact" className="text-sm font-semibold leading-6 text-white-900">
             Reach Us
-          </a>
+          </Link>
           </Popover.Group>
-              <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                <a href="#" className="text-sm font-semibold leading-6 text-white">
-                  Log in <span aria-hidden="true">&rarr;</span>
-                </a>
-              </div>
             </nav>
             <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
               <div className="fixed inset-0 z-50" />
               <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                 <div className="flex items-center justify-between">
-                  <a href="/" className="-m-1.5 p-1.5">
+                  <Link to="/" className="-m-1.5 p-1.5">
                     <span className="sr-only">Your Company</span>
                     <img
                       className="h-8 w-auto"
                       src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                       alt=""
                     />
-                  </a>
+                  </Link>
                   <button
                     type="button"
                     className="-m-2.5 rounded-md p-2.5 text-white"
@@ -142,22 +142,14 @@ export default function Navbar() {
                   <div className="-my-6 divide-y divide-white/10">
                     <div className="space-y-2 py-6">
                       {navigation.map((item) => (
-                        <a
+                        <Link
                           key={item.name}
-                          href={item.href}
+                          to={item.href}
                           className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50"
                         >
                           {item.name}
-                        </a>
+                        </Link>
                       ))}
-                    </div>
-                    <div className="py-6">
-                      <a
-                        href="#"
-                        className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-50"
-                      >
-                        Log in
-                      </a>
                     </div>
                   </div>
                 </div>

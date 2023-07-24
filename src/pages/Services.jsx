@@ -19,9 +19,9 @@ const ServiceCard = ({ service }) => {
         background: "#1d1836",
         color: "#fff",
       }}
-      className="sm:hover:scale-125 hover:scale-90"
+      className="hover:scale-125"
       contentArrowStyle={{ borderRight: "7px solid  #232631" }}
-      iconStyle={{ background: services.iconBg, scale: 20, boxSizing: 100 }}
+      iconStyle={{ background: services.iconBg, scale: 20, boxSizing: 20   }}
       icon={
         <div className='flex justify-center items-center w-full h-full'>
           <img
@@ -32,7 +32,7 @@ const ServiceCard = ({ service }) => {
         </div>
       }
     >
-      <div className="hover:scale-100">
+      <div>
         <h3 className='text-white text-[24px] font-bold hover:'>{service.title}</h3>
         <p
           className='text-secondary text-[16px] font-semibold'

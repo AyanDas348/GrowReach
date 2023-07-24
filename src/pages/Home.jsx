@@ -7,6 +7,7 @@ import Hero from "../components/Hero";
 import { useRef, useEffect } from "react";
 import { useInView } from "framer-motion";
 import { motion } from "framer-motion";
+import Fade from 'react-reveal/Fade';
 
 function Section({ children }) {
   const ref = useRef(null);
@@ -38,12 +39,14 @@ export default function Home() {
 
   return (
     <>
-        <Section><Hero/></Section>
-        <Section><About/></Section>
-        <Section><Services/></Section>
-        <Section><Quotes/></Section>
-        <Section><Career/></Section>
-        <Section><Contact/></Section>
-        </>
+        <Fade bottom>
+          <Hero/>
+          <About/>
+          <Services/>
+          <Quotes/>
+          <Career/>
+          <Contact/>
+        </Fade>
+    </>
   )
 }
