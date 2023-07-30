@@ -2,8 +2,9 @@ import React from 'react'
 import SlideUp from '../pages/SlideUp'
 const Services = () => {
   return (
-    <section>
-      <div className="sm:mx-60 mx-10 sm:max-w-[45%] py-32 sm:py-48 lg:py-56 w-70 snap-always sm:my-3">
+    <section className='bg-section4 bg-cover'>
+      <div className='sm:w-1/2'></div>
+      <div className="sm:mx-96 mx-10 py-32 sm:py-48 lg:py-56 snap-always sm:my-3">
           <div className="items-start">
             <h1 className="text-xl font-bold tracking-tight text-white-900 sm:text-8xl">
               What we offer

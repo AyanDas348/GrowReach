@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <section className='bg-gradient-to-bl'>
+    <section className='bg-section2 bg-no-repeat bg-cover'>
         <div className="sm:mx-60 mx-10 sm:max-w-[45%] py-32 sm:py-48 lg:py-56 w-70 snap-always relative">
           <div className="items-start">
             <h1 className="text-xl font-bold tracking-tight text-white-900 sm:text-8xl">

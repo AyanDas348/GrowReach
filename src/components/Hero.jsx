@@ -1,6 +1,6 @@
 function Hero() {
   return (
-    <section className={`relative w-full h-screen mx-auto`}>
+    <section className='relative w-full h-screen mx-auto bg-cover bg-section1'>
       <div className="relative isolate px-6 pt-14 lg:px-8 z-40 snap-y snap-mandatory">
         <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
