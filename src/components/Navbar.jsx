@@ -47,11 +47,7 @@ export default function Navbar() {
               <div className="flex lg:flex-1">
                 <Link to="/" className="-m-1.5 p-1.5">
                   <span className="sr-only">Your Company</span>
-                  <img
-                    className="h-8 w-auto"
-                    src=""
-                    alt="Company icon"
-                  />
+                  <h1 className='font-bold'>GROW REACH</h1>
                 </Link>
               </div>
               <div className="flex lg:hidden px-9">
