@@ -12,6 +12,7 @@ export default {
         'section4': "url('/src/assets/abstract-fantasy-landscape-background.jpg')",
         'section5': "url('/src/assets/influence.jpg')",
         'section6': "url('/src/assets/tab.jpg')",
+        'section7': "url('/src/assets/still-life-classic-chess-boards (1).jpg')"
       }
     },
   },
