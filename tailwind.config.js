@@ -10,8 +10,8 @@ export default {
         'section2': "url('/src/assets/branding1.png')",
         'section3': "url('/src/assets/individuality-concept-among-umbrellas.jpg')",
         'section4': "url('/src/assets/abstract-fantasy-landscape-background.jpg')",
-        'section5': "url('/src/assets/branding1.png')",
-        'section6': "url('/src/assets/branding1.png')",
+        'section5': "url('/src/assets/influence.jpg')",
+        'section6': "url('/src/assets/tab.jpg')",
       }
     },
   },
